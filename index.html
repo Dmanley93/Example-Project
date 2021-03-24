@@ -4,44 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Stat Tracker</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="public/styles.css" />
+    <link rel="stylesheet" href="public/styles.css">
 </head>
 
 
 
 
 <body>
+    <!-- This will center text on mobile, and left align it on screens 640px and wider -->
+<div class="text-center sm:text-left">
     <nav>
-        <div class="row justify-content-center">
+        <!--tailwindcss black background-->
+        <div class="bg-black text-gray-50 font-bold font-sans">
+
             <div class="col">
-                <figure class="h1 text-center">
-                    Awesome Stat Tracker
+                <figure class="h1 relative h-32 w-32 absolute left-0 top-0 h-0 w-0 font-mono">
+                    AST
                 </figure>
-                <figure class="text-center">
-                    Type in your username and select the games you want to compare!
-                </figure>
-                <div class="container">
-                    <aside class="row">
-                        <div class="col-3"></div>
-                        <div class="col-3">
-                            <p class="text-center">
-                                Type in your username and select 2 games below to compare.
+              
+                            <p class="place-content-center relative">
+                                <div class="inset-x-0 top-0 h-10">
+                                Type in your username and select 2 games below to compare!
                             </p>
                         </div>
-                        <div class="col-3 justify-content-center">
-                            <form id="search-bar">
-                                <input name="username" class="username-text" type="text" placeholder="Username!">
-                                <button id="btn">Search</button>
+                        <input class="bg-transparent border-b m-auto block border-gray-500 mb-6 text-gray-500 pb-1" type="text"
+             placeholder="Username!"/>
                             </form>
+                           <button id="btn" class="bg-red-500 px-4 py-2 text-white rounded-full">Search</button>
                         </div>
                         <br>
                         <br>
+                        <div class="text-gray-500">
+
                         <div class="row"></div>
                             <div class="row">
                                 <div class="col-3"></div>
@@ -78,6 +78,9 @@
                                             </optgroup>
                                         </select>
                                     </div>
+
+                                    </div>
+
                                 </div>
                             </div>
                     </aside>
@@ -97,10 +100,13 @@
                     <br>
                     <br>
                     <section class="displayPictures ">
-                        <img src="https://blog.activision.com/content/dam/atvi/activision/atvi-touchui/blog/callofduty/feature/AGB_WZ_0309_TOUT.jpg"
-                            alt="Call of Duty: Warzone" class="hide">
-                        <img src="https://thumbs.dreamstime.com/b/apex-legends-logo-illustration-video-game-along-its-name-144082430.jpg"
-                            alt="Other Game we haven't decided on yet" class="hide">
+
+                        <div class="flex flex-row">
+                            <div> <img src="https://blog.activision.com/content/dam/atvi/activision/atvi-touchui/blog/callofduty/feature/AGB_WZ_0309_TOUT.jpg"
+                                alt="Call of Duty: Warzone" class="hide"></div>
+                       <div><img src="https://thumbs.dreamstime.com/b/apex-legends-logo-illustration-video-game-along-its-name-144082430.jpg"
+                            alt="Other Game we haven't decided on yet" class="hide"></section></div>
+
                     </section>
 
                 </div>
