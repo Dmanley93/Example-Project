@@ -40,7 +40,7 @@ function renderAPEX(userName, userPlat, card) {
 
 
 	setTimeout(function() {
-		gamePlat = document.querySelector(`#second-card div #game-platform`);
+		gamePlat = document.querySelector(`#second-card > #game-platform`);
 		kills = document.querySelector(`#second-card div #kills`);
 		gamesPlayed = document.querySelector(`#second-card div #games-played`);
 		killsPGame = document.querySelector(`#second-card div #kills-per-game`);
@@ -110,7 +110,7 @@ function renderCOD(userName, userPlat) {
 	});
 
 	setTimeout(function() {
-		gamePlat = document.querySelector(`#second-card div #game-platform`);
+		gamePlat = document.querySelector(`#second-card > #game-platform`);
 		kills = document.querySelector(`#second-card div #kills`);
 		gamesPlayed = document.querySelector(`#second-card div #games-played`);
 		killsPGame = document.querySelector(`#second-card div #kills-per-game`);
