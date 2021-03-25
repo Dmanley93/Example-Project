@@ -17,6 +17,7 @@ function renderAPEX(userName, userPlat, card) {
 	let kills = document.querySelector(`#first-card div #kills`);
 	let gamesPlayed = document.querySelector(`#first-card div #games-played`);
 	let killsPGame = document.querySelector(`#first-card div #kills-per-game`);
+	let userDisp = document.querySelector("#first-card > #user-name");
 
 	fetch(`https://public-api.tracker.gg/v2/apex/standard/profile/xbl/ToxicKrueger`, {
 		method: "GET",
@@ -28,6 +29,7 @@ function renderAPEX(userName, userPlat, card) {
 	})
 	.then(data => {
 		gamePlat.textContent = "COD: Warzone - PlayStation";
+		userDisp.textContent = "ToxicKrueger";
 		kills.textContent = data.segments[0].stats.kills.displayValue;
 		gamesPlayed.textContent = data.segments[0].stats.matchesPlayed.displayValue;
 		killsPGame.textContent = (data.segments[0].stats.kills.value / data.segments[0].stats.matchesPlayed.value).toFixed(2);
@@ -42,6 +44,7 @@ function renderAPEX(userName, userPlat, card) {
 		kills = document.querySelector(`#second-card div #kills`);
 		gamesPlayed = document.querySelector(`#second-card div #games-played`);
 		killsPGame = document.querySelector(`#second-card div #kills-per-game`);
+		userDisp = document.querySelector("#second-card > #user-name");
 
 		if (userPlat === "PS4") {
 			userPlat = "psn";
@@ -63,6 +66,7 @@ function renderAPEX(userName, userPlat, card) {
 			}
 		})
 		.then(data => {
+			userDisp.textContent = userName;
 			kills.textContent = data.segments[0].stats.kills.displayValue;
 			gamesPlayed.textContent = data.segments[0].stats.matchesPlayed.displayValue;
 			killsPGame.textContent = (data.segments[0].stats.kills.value / data.segments[0].stats.matchesPlayed.value).toFixed(2);
@@ -81,6 +85,7 @@ function renderCOD(userName, userPlat) {
 	let kills = document.querySelector(`#first-card div #kills`);
 	let gamesPlayed = document.querySelector(`#first-card div #games-played`);
 	let killsPGame = document.querySelector(`#first-card div #kills-per-game`);
+	let userDisp = document.querySelector("#first-card > #user-name");
 
 	fetch("https://call-of-duty-modern-warfare.p.rapidapi.com/warzone/FFrozone/psn", {
 		"method": "GET",
@@ -95,6 +100,7 @@ function renderCOD(userName, userPlat) {
 	})
 	.then(data => {
 		gamePlat.textContent = "COD: Warzone - PlayStation";
+		userDisp.textContent = "ToxicKrueger";
 		kills.textContent = data.br.kills;
 		gamesPlayed.textContent = data.br.gamesPlayed;
 		killsPGame.textContent = (data.br.kills / data.br.gamesPlayed).toFixed(2);
@@ -108,6 +114,7 @@ function renderCOD(userName, userPlat) {
 		kills = document.querySelector(`#second-card div #kills`);
 		gamesPlayed = document.querySelector(`#second-card div #games-played`);
 		killsPGame = document.querySelector(`#second-card div #kills-per-game`);
+		userDisp = document.querySelector("#second-card > #user-name");
 
 		if (userPlat === "PS4") {
 			userPlat = "psn";
@@ -131,6 +138,7 @@ function renderCOD(userName, userPlat) {
 			return response.json();
 		})
 		.then(data => {
+			userDisp.textContent = userName;
 			kills.textContent = data.br.kills;
 			gamesPlayed.textContent = data.br.gamesPlayed;
 			killsPGame.textContent = (data.br.kills / data.br.gamesPlayed).toFixed(2);
