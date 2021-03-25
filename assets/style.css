@@ -2,17 +2,82 @@ img {
     height: 350px;
     width: 400px;
 }
-
-nav {
+header {
     font-size: 16px;
     background: #000;
     color: white;
     padding: 5px 20px;
 }
-
-
 body {
-    color: black;
-    background: url(1.jpg);
-    background-size: cover;
+color: black;
+background: url(1.jpg);
+background-size: cover;
+}
+
+#nav-container {
+display: inline-block;
+}
+
+nav {
+background-color: black;
+color: white;
+}
+
+#user-query {
+color: white
+}
+
+.results-card {
+min-height: 500px;
+background-color: black;
+border: 3px solid black;
+border-radius: 6px;
+color: white;
+margin-top: 30px;
+font-size: 24px;
+font-weight: bolder;
+position: relative;
+z-index: 1;
+}
+
+.results-card .bg{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("https://blog.activision.com/content/dam/atvi/activision/atvi-touchui/blog/callofduty/feature/AGB_WZ_0309_TOUT.jpg") center center;
+    opacity: .4;
+    width: 100%;
+    height: 100%;
+}
+
+.results-card .bgtwo{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("https://i.pinimg.com/originals/57/dd/bb/57ddbb0e894d12a376ae8653edd2092a.png") center center;
+    opacity: .4;
+    width: 100%;
+    height: 100%;
+}
+#first-card {
+margin-right: 12px;
+}
+
+
+#second-card {
+margin-left: 12px;
+}
+
+.dropDown {
+color: black;
+}
+
+.label-text {
+color:white;
 }
