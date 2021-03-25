@@ -20,32 +20,31 @@
     <!-- This will center text on mobile, and left align it on screens 640px and wider -->
     <div class="text-center sm:text-left">
         <nav>
+            <div class="container-fluid">
             <!--tailwindcss black background-->
             <div class="bg-black text-gray-50 font-bold font-sans">
-
-                <div class="col">
-                    <figure class="h1 relative w-32 absolute left-0 top-0 h-0 w-0 font-mono">
+                    <p class="text-6xl align-content-center font-mono">
                         AST
-                    </figure>
+                    </p>
 
-                    <p class="place-content-center relative">
-                    <div class="inset-x-0 top-0 h-10" id="nav-options">
+                    <div class="inset-x-0 top-0" id="nav-options">
                         Type in your username to compare stats with a leaderboard player!<br>(for COD, PC will
                         default to Activision ID)
                         <br>If your search brings no results, check spelling otherwise your account may have
                         privacy settings we can't bypass.
-                        </p>
                     </div>
-                </div>
+            </div>
                 <br>
-                <br>
-                <div class="text-gray-500">
-
-                    <div class="row"></div>
-                    <div class="row">
-                        <div class="col-3"></div>
-                        <div class="col-3">
-                            <div class="dropDown">
+                <div class="container text-gray-500">
+                    <div class="row-span-3">
+                        <div class="col-span-3">
+                            <form class="col-auto" id="search-bar">
+                                <input
+                                    class="bg-transparent border-2 m-auto block border-gray-500 m-6 text-gray-500 p-1"
+                                    name="username" id="user-query" type="text" placeholder="Username!">
+                            </form>
+                            <button id="btn" class="bg-red-500 px-4 py-2 m-2 text-white rounded-full">Search</button>
+                            <div class="dropDown my-1">
                                 <label for="games" class="label-text">Game:Platform</label>
                                 <select name="games" id="user-select-one">
                                     <optgroup label="COD-Warzone">
@@ -60,12 +59,6 @@
                                     </optgroup>
                                 </select>
                             </div>
-                            <form class="col-auto" id="search-bar">
-                                <input
-                                    class="bg-transparent border-b m-auto block border-gray-500 mb-6 text-gray-500 pb-1"
-                                    name="username" id="user-query" type="text" placeholder="Username!">
-                            </form>
-                            <button id="btn" class="bg-red-500 px-4 py-2 text-white rounded-full">Search</button>
                         </div>
                     </div>
                 </div>
