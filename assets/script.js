@@ -28,7 +28,7 @@ function renderAPEX(userName, userPlat, card) {
 		}
 	})
 	.then(data => {
-		gamePlat.textContent = "COD: Warzone - PlayStation";
+		gamePlat.textContent = "APEX - PlayStation";
 		userDisp.textContent = "ToxicKrueger";
 		kills.textContent = data.segments[0].stats.kills.displayValue;
 		gamesPlayed.textContent = data.segments[0].stats.matchesPlayed.displayValue;
@@ -48,13 +48,13 @@ function renderAPEX(userName, userPlat, card) {
 
 		if (userPlat === "PS4") {
 			userPlat = "psn";
-			gamePlat.textContent = "COD: Warzone - PlayStation";
+			gamePlat.textContent = "APEX - PlayStation";
 		} else if (userPlat === "XBOX") {
 			userPlat = "xbl";
-			gamePlat.textContent = "COD: Warzone - Xbox Live";
+			gamePlat.textContent = "APEX - Xbox Live";
 		} else {
 			userPlat = "origin";
-			gamePlat.textContent = "COD: Warzone - PC";
+			gamePlat.textContent = "APEX - PC";
 		}
 
 		fetch(`https://public-api.tracker.gg/v2/apex/standard/profile/${userPlat}/${userName}`, {
@@ -100,7 +100,7 @@ function renderCOD(userName, userPlat) {
 	})
 	.then(data => {
 		gamePlat.textContent = "COD: Warzone - PlayStation";
-		userDisp.textContent = "ToxicKrueger";
+		userDisp.textContent = "FFrozone";
 		kills.textContent = data.br.kills;
 		gamesPlayed.textContent = data.br.gamesPlayed;
 		killsPGame.textContent = (data.br.kills / data.br.gamesPlayed).toFixed(2);
