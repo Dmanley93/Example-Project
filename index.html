@@ -10,100 +10,75 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
-    <!-- <link rel="stylesheet" href="public/styles.css"> -->
+    <link rel="stylesheet" href="public/styles.css" />
 </head>
 
-
-<header>
-    <div class="row justify-content-center">
-        <div class="col">
-            <figure class="h1 text-center">
-                Awesome Stat Tracker
-            </figure>
-            <figure class="text-center">
-                Type in your username and select the games you want to compare!
-            </figure>
-        </div>
-    </div>
-</header>
-<br>
-
 <body>
-    <div class="container">
-        <aside class="row">
-            <div class="col-3"></div>
-            <div class="col-3">
-                <p class="text-center">
-                    Type in your username and select 2 games below to compare.
-                </p>
-            </div>
-            <div class="col-3 justify-content-center">
-                <form id="search-bar">
-                    <input name="username" class="username-text" type="text" placeholder="Username!">
-                    <button id="btn">Search</button>
-                </form>
-            </div>
-            <br>
-            <br>
-            <div class="row">
-                <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col-3">
-                        <div class="dropDown">
-                            <label for="games">Choose your Console:</label>
-                            <select name="games" label="games">
-                                <optgroup id="COD: Warzone">
-                                    <option value="ps4">COD:PS4</option>
-                                    <option value="pc">COD:PC</option>
-                                    <option value="xbox">COD:XBOX</option>
-                                </optgroup>
-                                <optgroup label="APEX">
-                                    <option value="ps4">APEX:PS4</option>
-                                    <option value="pc">APEX:PC</option>
-                                    <option value="xbox">APEX:XBOX</option>
-                                </optgroup>
-                            </select>
-                        </div>
+    <div class="text-center sm:text-left">
+        <nav>
+            <div class="bg-black text-gray-50 font-bold font-sans">
+                <div class="col">
+                    <div class="h1 relative w-32 absolute left-0 top-0 h-0 w-0 font-mono">
+                        AST
                     </div>
-                    <div class="col-6">
-                        <div class="dropDown">
-                            <label for="games">Choose your Console:</label>
-                            <select name="games" id="games">
-                                <optgroup label="COD: Warzone">
-                                    <option value="ps4">COD:PS4</option>
-                                    <option value="pc">COD:PC</option>
-                                    <option value="xbox">COD:XBOX</option>
-                                </optgroup>
-                                <optgroup label="APEX">
-                                    <option value="ps4">APEX:PS4</option>
-                                    <option value="pc">APEX:PC</option>
-                                    <option value="xbox">APEX:XBOX</option>
-                                </optgroup>
-                            </select>
+                    <div class="col-auto text-center">
+                        <div class="container">
+                            <div class="col-auto" id="nav-options">
+                                Type in your username to compare stats with a leaderboard player!<br>(for COD, PC will
+                                default to Activision ID)
+                                <br>If your search brings no results, check spelling otherwise your account may have
+                                privacy settings we can't bypass.
+                            </div>
+                            <div class="row">
+                                <div class="dropDown col-auto">
+                                    <label for="games" class="label-text">Game:Platform</label>
+                                    <select name="games" id="user-select-one">
+                                        <optgroup label="COD-Warzone">
+                                            <option value="ps4">COD:PS4</option>
+                                            <option value="pc">COD:PC</option>
+                                            <option value="xbox">COD:XBOX</option>
+                                        </optgroup>
+                                        <optgroup label="APEX">
+                                            <option value="ps4">APEX:PS4</option>
+                                            <option value="pc">APEX:PC</option>
+                                            <option value="xbox">APEX:XBOX</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <form class="col-auto" id="search-bar">
+                                    <input name="username" id="user-query" type="text" placeholder="Username!">
+                                    <button id="btn">Search</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-        </aside>
-        <br>
-        <br>
-        <br>
+            </div>
+        </nav>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <div class="displayResults" id="displayResults">
-                    Results displayed here:
-                    <br>
-                    <br>
-                    <section class="displayPictures ">
-                        <img src="https://blog.activision.com/content/dam/atvi/activision/atvi-touchui/blog/callofduty/feature/AGB_WZ_0309_TOUT.jpg"
-                            alt="Call of Duty: Warzone" class="hide">
-                        <img src="https://thumbs.dreamstime.com/b/apex-legends-logo-illustration-video-game-along-its-name-144082430.jpg"
-                            alt="Other Game we haven't decided on yet" class="hide">
-                    </section>
-
-                </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-5 results-card" id="first-card">
+                <div id="game-platform"></div>
+                <div>Kills: <span id="kills"></span></div>
+                <div>Games Played: <span id="games-played"></span></div>
+                <div>Kills/Game: <span id="kills-per-game"></span></div>
             </div>
+            <div class="col-5 results-card" id="second-card">
+                <div id="game-platform"></div>
+                <div>Kills: <span id="kills"></span></div>
+                <div>Games Played: <span id="games-played"></span></div>
+                <div>Kills/Game: <span id="kills-per-game"></span></div>
+            </div>
+
+        </div>
+        <div class="row">
+            <section class="displayPictures">
+                <img src="https://blog.activision.com/content/dam/atvi/activision/atvi-touchui/blog/callofduty/feature/AGB_WZ_0309_TOUT.jpg"
+                    alt="Call of Duty: Warzone" class="hide">
+                <img src="https://thumbs.dreamstime.com/b/apex-legends-logo-illustration-video-game-along-its-name-144082430.jpg"
+                    alt="Other Game we haven't decided on yet" class="hide">
+            </section>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
