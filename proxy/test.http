@@ -1,4 +1,4 @@
-GET https://localhost:3000/xbl/ToxicKrueger
+GET http://localhost:3000/xbl/ToxicKrueger
 trn-api-key: da25f33c-7469-4fcb-aba3-db4dc3556c06
 accept: application/json
 Accept-Encoding: gzip
