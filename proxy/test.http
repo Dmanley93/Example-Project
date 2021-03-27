@@ -1,0 +1,10 @@
+GET http://localhost:3000/xbl/ToxicKrueger
+trn-api-key: da25f33c-7469-4fcb-aba3-db4dc3556c06
+accept: application/json
+Accept-Encoding: gzip
+
+# GET https://call-of-duty-modern-warfare.p.rapidapi.com/warzone/Amartin743/psn
+# x-rapidapi-key: "b88cba1fcbmsh7869a886655f82ap1f8663jsn94efc9749e48"
+# x-rapidapi-host: "call-of-duty-modern-warfare.p.rapidapi.com"
+# accept: text/plain
+# Accept-Encoding: gzip
