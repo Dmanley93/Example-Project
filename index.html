@@ -23,7 +23,7 @@
             <div class="container-fluid">
             <!--tailwindcss black background-->
             <div class="bg-black text-gray-50 font-bold font-sans">
-                    <p class="text-6xl align-content-center font-mono">
+                    <p class="text-6xl align-content-center">
                         AST
                     </p>
 
@@ -40,13 +40,13 @@
                         <div class="col-span-3">
                             <form class="col-auto" id="search-bar">
                                 <input
-                                    class="bg-transparent border-2 m-auto block border-gray-500 m-6 text-gray-500 p-1"
+                                    class="bg-white border-2 m-auto block border-gray-500 m-6 text-gray-500 p-1 rounded-3"
                                     name="username" id="user-query" type="text" placeholder="Username!">
                             </form>
                             <button id="btn" class="bg-red-500 px-4 py-2 m-2 text-white rounded-full">Search</button>
                             <div class="dropDown my-1">
-                                <label for="games" class="label-text">Game:Platform</label>
-                                <select name="games" id="user-select-one">
+                                <label for="games" class="label-text font-sans">Game: Platform</label>
+                                <select class="mb-2 rounded-full" name="games" id="user-select-one">
                                     <optgroup label="COD-Warzone">
                                         <option value="ps4">COD:PS4</option>
                                         <option value="pc">COD:PC</option>
@@ -63,31 +63,24 @@
                     </div>
                 </div>
             </div>
-            </aside>
-    </div>
-    </div>
     </div>
     </nav>
-    <br>
-    <br>
-    <br>
-    <br>
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-5 results-card" id="first-card">
                 <div id="game-platform"></div>
                 <div id="user-name"></div>
-                <div>Kills: <span id="kills"></span></div>
-                <div>Games Played: <span id="games-played"></span></div>
-                <div>Kills/Game: <span id="kills-per-game"></span></div>
+                <div class="m-1">Kills: <span id="kills"></span></div>
+                <div class="m-1">Games Played: <span id="games-played"></span></div>
+                <div class="m-1">Kills/Game: <span id="kills-per-game"></span></div>
                 <div class="bg"></div>
             </div>
             <div class="col-5 results-card" id="second-card">
                 <div id="game-platform"></div>
                 <div id="user-name"></div>
-                <div>Kills: <span id="kills"></span></div>
-                <div>Games Played: <span id="games-played"></span></div>
-                <div>Kills/Game: <span id="kills-per-game"></span></div>
+                <div class="m-1">Kills: <span id="kills"></span></div>
+                <div class="m-1">Games Played: <span id="games-played"></span></div>
+                <div class="m-1">Kills/Game: <span id="kills-per-game"></span></div>
                 <div class="bgtwo"></div>
             </div>
 
