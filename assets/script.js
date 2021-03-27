@@ -12,7 +12,7 @@ function changeImage() {
 setInterval(changeImage, 5000);
 
 
-function renderAPEX(userName, userPlat, card) {
+function renderAPEX(userName, userPlat) {
 	let gamePlat = document.querySelector(`#first-card > #game-platform`);
 	let kills = document.querySelector(`#first-card div #kills`);
 	let gamesPlayed = document.querySelector(`#first-card div #games-played`);
@@ -32,7 +32,7 @@ function renderAPEX(userName, userPlat, card) {
 	})
 	.then(data => {
 		console.log(data);
-		gamePlat.textContent = "APEX - PlayStation";
+		gamePlat.textContent = "APEX - Xbox Live";
 		userDisp.textContent = "ToxicKrueger";
 		kills.textContent = data.data.segments[0].stats.kills.displayValue;
 		gamesPlayed.textContent = data.data.segments[0].stats.matchesPlayed.displayValue;
