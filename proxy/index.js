@@ -15,5 +15,5 @@ app.use('', createProxyMiddleware({
     changeOrigin: true,
  }));
 
- app.listen(PORT, HOST);
+ app.listen(PORT);
 
