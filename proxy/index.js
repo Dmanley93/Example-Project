@@ -13,9 +13,7 @@ app.use(cors());
 app.use('', createProxyMiddleware({
     target: API_SERVICE_URL,
     changeOrigin: true,
-    pathRewrite: {
-        [`^/json_placeholder`]: '',
-    },
  }));
 
  app.listen(PORT, HOST);
+
