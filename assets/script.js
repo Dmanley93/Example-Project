@@ -27,12 +27,16 @@ function renderAPEX(userName, userPlat, card) {
 			"Accept-Encoding": "gzip"
 		}
 	})
+	.then(response => {
+		return response.json();
+	})
 	.then(data => {
+		console.log(data);
 		gamePlat.textContent = "APEX - PlayStation";
 		userDisp.textContent = "ToxicKrueger";
-		kills.textContent = data.segments[0].stats.kills.displayValue;
-		gamesPlayed.textContent = data.segments[0].stats.matchesPlayed.displayValue;
-		killsPGame.textContent = (data.segments[0].stats.kills.value / data.segments[0].stats.matchesPlayed.value).toFixed(2);
+		kills.textContent = data.data.segments[0].stats.kills.displayValue;
+		gamesPlayed.textContent = data.data.segments[0].stats.matchesPlayed.displayValue;
+		killsPGame.textContent = (data.data.segments[0].stats.kills.value / data.data.segments[0].stats.matchesPlayed.value).toFixed(2);
 	})
 	.catch(err => {
 		console.error(err);
@@ -65,11 +69,14 @@ function renderAPEX(userName, userPlat, card) {
 			"Accept-Encoding": "gzip"
 			}
 		})
+		.then(response => {
+			return response.json();
+		})
 		.then(data => {
 			userDisp.textContent = userName;
-			kills.textContent = data.segments[0].stats.kills.displayValue;
-			gamesPlayed.textContent = data.segments[0].stats.matchesPlayed.displayValue;
-			killsPGame.textContent = (data.segments[0].stats.kills.value / data.segments[0].stats.matchesPlayed.value).toFixed(2);
+			kills.textContent = data.data.segments[0].stats.kills.displayValue;
+			gamesPlayed.textContent = data.data.segments[0].stats.matchesPlayed.displayValue;
+			killsPGame.textContent = (data.data.segments[0].stats.kills.value / data.data.segments[0].stats.matchesPlayed.value).toFixed(2);
 		})
 		.catch(err => {
 			console.error(err);
