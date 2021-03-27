@@ -19,7 +19,7 @@ function renderAPEX(userName, userPlat, card) {
 	let killsPGame = document.querySelector(`#first-card div #kills-per-game`);
 	let userDisp = document.querySelector("#first-card > #user-name");
 
-	fetch(`https://public-api.tracker.gg/v2/apex/standard/profile/xbl/ToxicKrueger`, {
+	fetch('https://agile-badlands-84783.herokuapp.com/xbl/ToxicKrueger', {
 		method: "GET",
 		headers: {
 			"trn-api-key": "da25f33c-7469-4fcb-aba3-db4dc3556c06",
@@ -57,7 +57,7 @@ function renderAPEX(userName, userPlat, card) {
 			gamePlat.textContent = "APEX - PC";
 		}
 
-		fetch(`https://public-api.tracker.gg/v2/apex/standard/profile/${userPlat}/${userName}`, {
+		fetch(`https://agile-badlands-84783.herokuapp.com/${userPlat}/${userName}`, {
 		method: "GET",
 		headers: {
 			"trn-api-key": "da25f33c-7469-4fcb-aba3-db4dc3556c06",
